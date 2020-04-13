@@ -1,0 +1,51 @@
+  * {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-decoration: none;
+
+      .container-fluid {
+          margin-right: 0px;
+          margin-left: 0px;
+          padding-right: 0px;
+          padding-left: 0px;
+      }
+
+      .row {
+          margin-right: 0px;
+          margin-left: 0px;
+          padding-left: 0px;
+          padding-right: 0px;
+      }
+  }
+
+  // Root Colors for website //
+  :root {
+      --main-color: #0d0e30;
+      --main-color2: #000000ef;
+      --main-color2-2: #161515ef;
+      --main-color3: #0a0b29ef;
+      --main-color3-3: #0f123bef;
+      --main-color4: #240a44ef;
+      --main-color4-4: #2b0c52ef;
+      --main-color5: #fca503;
+      --main-color5-5: #ffae00af;
+      --main-color7: #ff0000be;
+      --text-color: #FCF6F5FF;
+      --main-font: Fredoka One;
+      --text-font: Poppins;
+      --text-font2: Montserrat;
+      --text-font3: Philosopher;
+      --text-font4: Bowlby One SC;
+  }
+
+  // Google Fonts in the below //
+
+  @import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Philosopher&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Bowlby+One+SC&display=swap');
+
+  // Transition second //
+  $ts: 0.3s;
+  $td: 0.05s;

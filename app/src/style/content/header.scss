@@ -1,0 +1,449 @@
+ @import 'maxin.scss';
+
+  .header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-color);
+    background-size: 100%;
+    overflow: hidden;
+
+
+    &__main {
+      padding-top: 1.855555em;
+      width: 100%;
+
+      // Logo //
+      &-logo {
+        img {
+          width: 5em;
+          height: auto;
+          animation: animation_logo 5s infinite;
+          transform: rotateX(180deg);
+          margin-left: 2em;
+        }
+      }
+
+
+    }
+
+    .display__flex-menu {
+      width: 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (max-width:425px) {
+        width: 36%;
+      }
+
+      @media (max-width:768px) {
+        width: 25%;
+      }
+
+      @media (max-width:1024px) {
+        width: 15%;
+      }
+
+      @media (max-width:1200px) {
+        width: 11%;
+      }
+
+      @media (max-width:1440px) {
+        width: 9%;
+      }
+
+      @media (max-width:1600px) {
+        width: 8%;
+      }
+    }
+
+    // Languages //
+
+    .dropbtn {
+      background-color: transparent;
+      color: var(--text-color);
+      padding: 1em;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+
+    }
+
+    .gl-btn {
+      font-size: 1.4em;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      z-index: 10;
+      align-self: flex-end;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: transparent;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+
+    }
+
+    .dropdown-content a {
+      color: var(--text-color);
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+
+    }
+
+    .dropdown-content a:hover {
+      background-color: #000000ef;
+      z-index: 1000;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #000000ef;
+
+    }
+
+
+    // Main text in the centre 'Company name' //
+    .svg {
+      width: 40em;
+      height: 40em;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+
+    .company_draw {
+      stroke: var(--text-color);
+      stroke-width: 0.05em;
+      stroke-dasharray: 630;
+      stroke-dashoffset: 1270;
+      fill: transparent;
+      animation: dash 10s alternate infinite;
+    }
+
+    // Menu Bar //
+
+    .page-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      overflow: visible;
+      padding: 1rem;
+      
+    }
+
+    .page-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      min-height: 100vh;
+      text-align: center;
+      color: var(--text-color);
+      
+      
+    }
+
+    .page-tagline {
+      font-size: 0.75rem;
+      font-weight: 700;
+    
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+      }
+    }
+
+    .page-title {
+      margin-bottom: 1.5rem;
+      font-family: 'Shrikhand', serif;
+      font-size: 2rem;
+      line-height: 1.2;
+      
+
+      @media (min-width: 450px) {
+        font-size: 3rem;
+      }
+    }
+
+    nav {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100vw;
+      min-height: 100vh;
+      text-align: center;
+      background-color: transparent;
+      opacity: 0;
+      transform: translateY(+100%);
+      transition:
+        opacity $ts * 1.5 $ts * 1.5 ease,
+        transform 0s $ts * 4;
+      z-index: 11;
+    }
+
+    .menu ol {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      width: 100%;
+
+      .home-menu a {
+        background-color: var(--main-color3) !important;
+      }
+
+      .home-menu a:hover {
+        background-color: var(--main-color3-3) !important;
+      }
+
+      .about-menu a {
+        background-color: var(--main-color3) !important;
+      }
+
+      .about-menu a:hover {
+        background-color: var(--main-color3-3) !important;
+      }
+
+      .contact-menu a {
+        background-color: var(--main-color3) !important;
+      }
+
+      .contact-menu a:hover {
+        background-color: var(--main-color3-3) !important;
+      }
+
+      @media (min-width: 820px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      li {
+        display: grid;
+        grid-column: span 1;
+        grid-gap: 1rem;
+        overflow: hidden;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        width: 100%;
+        height: 100%;
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: var(--text-color);
+        font-family: var(--text-font3);
+        background-color: var(--main-color2);
+        border-radius: 2px;
+
+        @media (min-width: 450px) {
+          font-size: 1.75rem;
+        }
+      }
+
+      a:hover {
+        background-color: var(--main-color2-2);
+      }
+    }
+
+    .menu>ol>li:nth-child(n + 3) {
+      grid-column: span 2;
+    }
+
+    .menu .sub-menu {
+      padding: 0;
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (min-width: 500px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      li a {
+        font-size: 0.85rem;
+        color: var(--text-color);
+        background-color: var(--main-color4);
+
+        @media (min-width: 450px) {
+          font-size: 1rem;
+        }
+      }
+
+      li a:hover {
+        background-color: var(--main-color4-4);
+      }
+
+      li:nth-child(3n) {
+        grid-column: span 2;
+
+        @media (min-width: 500px) {
+          grid-column: span 1;
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 2px;
+      position: relative;
+      width: 28px;
+      height: 22px;
+      z-index: 100;
+      margin-top: 2em;
+      cursor: pointer;
+
+      &:before {
+        content: '×';
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 2.4rem;
+        line-height: 0.4;
+        color: white;
+        z-index: 2;
+        opacity: 0;
+        transition: opacity $ts ease;
+      }
+
+      span {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 2px;
+        background-color: whitesmoke;
+        border-radius: 2px;
+        transition: transform $ts ease;
+        transform-origin: 100% 100%;
+
+        @for $i from 1 through 6 {
+          &:nth-child(#{$i}) {
+            transition-delay: $ts + ($td * $i);
+          }
+        }
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          grid-column: span 3;
+        }
+
+        &:nth-child(3),
+        &:nth-child(6) {
+          grid-column: span 2;
+        }
+
+        &:nth-child(4),
+        &:nth-child(5) {
+          grid-column: span 4;
+        }
+      }
+    }
+
+    #menu-toggle-input {
+      display: none;
+
+      &:checked~.menu-toggle {
+        span {
+          transform: scaleX(0);
+
+          @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+              transition-delay: $td * $i;
+            }
+          }
+        }
+
+        &:before {
+          opacity: 1;
+          transition-delay: $ts * 2.5;
+        }
+      }
+
+      &:checked~nav {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0s;
+
+        a {
+          color: white;
+          transform: translate(0, 0);
+        }
+
+        @for $i from 1 through 5 {
+          >ol>li:nth-child(#{$i})>a {
+            transition:
+              color $ts ($ts * 2.75),
+              transform $ts ($ts + $td * $i) ease;
+          }
+
+          .sub-menu>li:nth-child(#{$i})>a {
+            transition:
+              color $ts ($ts * 2.75),
+              transform $ts ($ts * 1.5 + $td * $i) ease;
+          }
+        }
+      }
+    }
+
+    @for $i from 1 through 5 {
+      .menu>ol>li:nth-child(#{$i})>a {
+        transform: translate(calc(-100% - 12px), 0);
+        transition:
+          color $ts,
+          transform $ts ($ts / 2 + $td * $i) ease;
+      }
+
+      .sub-menu>li:nth-child(#{$i})>a {
+        transform: translate(0, calc(-100% - 12px));
+        transition:
+          color $ts,
+          transform $ts ($ts / 2 + $td * $i) ease;
+      }
+    }
+
+
+
+    // Logo Animation //
+    @keyframes animation_logo {
+      50% {
+        transform: none;
+      }
+    }
+
+
+    //Company name Dash animation //
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+
+  // Main Animated Background //
+  canvas {
+    width: 100% !important;
+    position: absolute;
+    top: 0%;
+    z-index: 0;
+
+    @media (min-width: 320px) {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
